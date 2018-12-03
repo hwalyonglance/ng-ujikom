@@ -1,0 +1,104 @@
+// @import '~font-awesome/css/font-awesome.min.css';
+@import './assets/iconfont/material-icons.css';
+// @import './assets/materialize.css',
+// @import '~animate.css/animate.min.css';
+@import '~@angular/material/theming';
+@include mat-core();
+$ilm-primary: mat-palette($mat-light-blue);
+$ilm-accent: mat-palette($mat-yellow);
+$ilm-warn: mat-palette($mat-red);
+$ilm-theme: mat-light-theme( $ilm-primary, $ilm-accent, $ilm-warn );
+@include angular-material-theme($ilm-theme);
+
+// ---------------------------------
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	// transition: .5s;
+}
+
+.flex-fill{
+	flex: 1 1 fill;
+}
+
+.flex-auto{
+	flex: 1 0 auto;
+}
+
+.pointer{
+	cursor: pointer;
+}
+.full-width{
+	width: 100%;
+}
+.container, .no-padding{
+	padding: 0 !important;
+}
+
+.width-40px{
+	width: 40px !important;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6, .topnav, .no-margin{
+	margin: 0 !important;
+}
+h1{
+	padding: 36px;
+	text-align: center;
+}
+p{
+	padding: 4px 18px;
+}
+.mat-dialog-container{
+	padding: 0 !important;
+}
+.iil{
+	margin: 2px 8px 2px 0;
+	height: 40px;
+	width: 40px;
+	float: left;
+}
+.owit{
+	float: left;
+}
+
+.hide, .hidden{
+	display: none !important;
+}
+.mat-card-actions{
+	padding: 0 20px;
+}
+.no-border-radius{
+	border-radius: 0 !important;
+}
+
+.mat-row:hover .mat-column-actions button{
+	display: inline-block;
+}
+.mat-column-actions{
+	text-align: right;
+}
+.mat-column-actions button{
+	display: none;
+}
+x-input, .x-input, .tiga00px{
+	max-width: 200px !important;
+	min-width: 180px !important;
+}
+.center{
+	margin: 4px auto;
+}
+cetak-header,.cetak-header{
+	text-align: center
+}
+[class^='cetak']{
+	padding: 8px 32px;
+}

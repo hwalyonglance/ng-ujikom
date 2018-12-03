@@ -1,0 +1,87 @@
+{
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"project": {
+		"name": "ujikom-keluar-masuk"
+	},
+	"apps": [
+		{
+			"root": "src",
+			"outDir": "functions/public",
+			"assets": [
+				"assets",
+				"favicon.ico",
+				"manifest.appcache",
+				"manifest.json",
+				"offline.html",
+				"robots.txt",
+				"sw.js",
+				{
+					"glob": "workbox-sw.prod.*",
+					"input": "../node_modules/workbox-sw/build/importScripts/",
+					"output": "./"
+				}
+			],
+			"index": "index.html",
+			"main": "main.browser.ts",
+			"polyfills": "polyfills.ts",
+			"tsconfig": "tsconfig.app.json",
+			"prefix": "",
+			"styles": [
+				"styles.scss"
+			],
+			"scripts": [],
+			"environmentSource": "environments/environment.ts",
+			"environments": {
+				"dev": "environments/environment.ts",
+				"prod": "environments/environment.prod.ts"
+			},
+			"serviceWorker": true
+		},
+		{
+			"name": "server",
+			"platform": "server",
+			"root": "src",
+			"outDir": "functions/lib",
+			"main": "main.server.ts",
+			"tsconfig": "tsconfig.server.json",
+			"environmentSource": "environment/environment.ts",
+			"environments": {
+				"dev": "environment.environment.ts",
+				"prod": "environment.environment.prod.ts"
+			}
+		}
+	],
+	"defaults": {
+		"build": {
+			"deleteOutputPath": true,
+			"outputHashing": "none"
+		},
+		"class": {
+			"spec": false
+		},
+		"component": {
+			"inlineStyle": true,
+			"inlineTemplate": true,
+			"spec": false
+		},
+		"directive": {
+			"spec": false
+		},
+		"guard": {
+			"spec": false
+		},
+		"module": {
+			"spec": false
+		},
+		"pipe": {
+			"spec": false
+		},
+		"serve": {
+			"baseHref": "/"
+		},
+		"service": {
+			"spec": false
+		},
+		"styleExt": "scss"
+	}
+}

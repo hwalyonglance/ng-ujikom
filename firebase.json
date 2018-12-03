@@ -1,0 +1,21 @@
+{
+	"database": {
+		"rules": "database.rules.json"
+	},
+	"hosting": {
+		"public": "functions/public",
+		"rewrites": [
+			{
+				"source": "/cetak",
+				"function":"cetak"
+			},
+			{
+				"source": "**",
+				"function": "app"
+			}
+		]
+	},
+	"functions": {
+		"source": "functions"
+	}
+}
